@@ -3,16 +3,16 @@
   connection: local
 
   vars:
-    course_name: "AWS DevSecOps"
-    duration: 120
-    topics:
-    - linux
+    course_name: "AWS DevSecOps" #String data type
+    duration: 120 #number
+    topics: # List data type
+    - linux 
     - shell
     - ansible
     - AWS
 
-    live: true
-    tools:  
+    live: true # boolean
+    tools:  # Map data type
       ci: jenkins
       clound: aws
       containerization: docker
