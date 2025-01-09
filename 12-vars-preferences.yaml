@@ -1,6 +1,6 @@
 - name: Play for variable preferences
   hosts:  local
-  connections:  local
+  connection:  local
 
   vars:
     GREET: "PLAY"
@@ -16,3 +16,8 @@
 
       ansible.builtin.debug:
         msg: "{{ GREET }}"
+
+
+
+#
+#
