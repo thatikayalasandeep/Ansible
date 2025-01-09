@@ -5,12 +5,15 @@
   vars_prompt:
     - name: COURSE
       prompt: Please enter the course name
+      private: false #we can view inputs, its not confidention information
 
     - name: DURATION
       prompt: Please enter the course Duration
+      private: false #we can view inputs, its not confidention information
 
     - name: TRAINER
       prompt: Please enter your trainer name
+      private: false #we can view inputs, its not confidention information
 
   tasks:
     - name: Print the prompt variables
