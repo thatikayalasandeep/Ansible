@@ -3,7 +3,7 @@
   connection:  local
 
   vars:
-    GREET: "PLAY"
+    GREET: PLAY
   vars_files:
     - course.yaml
   vars_prompt:
@@ -14,11 +14,8 @@
     - name: task level variable
       vars:
         GREET: Task
-
       ansible.builtin.debug:
         msg: "{{ GREET }}"
 
 
 
-#
-#
