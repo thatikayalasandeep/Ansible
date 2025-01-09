@@ -1,6 +1,6 @@
 - name: Conditions statement
-  hosts:  local
-  condition:  local
+  hosts: local
+  condition: local
 
   vars:
     num: 15
