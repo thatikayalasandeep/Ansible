@@ -18,11 +18,11 @@
         msg: "{{ GREET }}"
 
 
-#Arguments variables
-#Prompt variabless
-#Task level variables
-#File Variabless
-#Play level variables
-#Inventory variables
+#1. Command line or args
+#2. Task level
+#3. Files
+#4. Prompt
+#5. Play
+#6. Inventory
 
 
