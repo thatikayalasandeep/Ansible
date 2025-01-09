@@ -1,0 +1,15 @@
+- name: Play to view difference between play level and task level variables
+  hosts: local
+  connections:
+  vars:
+    LEARNER: Sandeep
+  tasks:
+    - name: view play level variable
+      ansible.builtin.debug:
+        msg: "Learner Name: {{ LEARNER }}"
+    
+    - name: View task level variable
+      vars:
+        LEARNER: Thatikayala
+      ansible.builtin.debug:
+        msg: "Learner Name: {{ LEARNER }}"
