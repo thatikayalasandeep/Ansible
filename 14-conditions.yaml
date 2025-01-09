@@ -1,4 +1,4 @@
-- name: Conditional statement
+- name: Check is Conditional statement
   hosts:  local
   condition:  local
   vars:
