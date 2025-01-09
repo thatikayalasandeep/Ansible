@@ -1,10 +1,8 @@
 - name: Conditional statement
   hosts:  local
   condition:  local
-
   vars:
     my_number:  15
-
   tasks:
   - name: print if number greater than 10
     ansible.builtin.debug:
