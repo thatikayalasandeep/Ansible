@@ -6,10 +6,10 @@
     GREET: PLAY
   vars_files:
     - course.yaml
-  vars_prompt:
-    - name: GREET
-      prompt: Please enter you input
-      private: false
+  # vars_prompt:
+  #   - name: GREET
+  #     prompt: Please enter you input
+  #     private: false
   tasks:
     - name: task level variable
       vars:
@@ -18,4 +18,5 @@
         msg: "{{ GREET }}"
 
 
-
+#Arguments variables
+#Prompt variables
