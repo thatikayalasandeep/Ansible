@@ -1,6 +1,6 @@
 - name: play for prompt variables
   hosts: local
-  connections: local
+  connection: local
 
   vars_prompt:
     - name: COURSE
