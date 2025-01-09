@@ -1,4 +1,4 @@
-- name: Play for conditions statement
+- name: Conditions statement
   hosts:  local
   condition:  local
 
