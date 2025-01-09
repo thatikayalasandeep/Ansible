@@ -1,7 +1,7 @@
-- name: Play to access variables from inventory for localhost
+- name: play for inventory variables
   hosts:  web
 
-  task:
+  tasks:
     - name: Print course information
       ansible.builtin.debug:
         msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Trainer is {{ TRAINER }}"
