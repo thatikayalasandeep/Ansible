@@ -1,6 +1,6 @@
 - name: Play to view difference between play level and task level variables
   hosts: local
-  connections:
+  connection: local 
   vars:
     LEARNER: Sandeep
   tasks:
