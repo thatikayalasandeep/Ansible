@@ -12,11 +12,13 @@
   #     private: false
   tasks:
     - name: task level variable
-      vars:
-        GREET: Task
+      # vars:
+      #   GREET: Task
       ansible.builtin.debug:
         msg: "{{ GREET }}"
 
 
 #Arguments variables
 #Prompt variables
+#Task level variable
+
