@@ -1,0 +1,11 @@
+- name: play for variable from file
+  hosts: local
+  connection: local
+  vars_files:
+  -  course.yaml
+
+  tasks:
+    - name: Print variables from file
+      ansible.builtin.debug:
+        msg: "Course Name: {{ COURSE }}, DURATION: {{ DURATION }}, Trainer Name: {{ TRAINER }}"
+  
