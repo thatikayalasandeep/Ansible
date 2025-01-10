@@ -1,0 +1,13 @@
+- name: Learn loops concept
+  hosts:  local
+  condition:  local
+
+  taks:
+  - name: Print items using loop
+    ansible.builtin.debug:
+      msg: "{{ item }}"
+    loop:
+    - sandeep
+    - tharak
+    - prince
+    - sitara
