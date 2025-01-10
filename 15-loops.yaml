@@ -1,6 +1,6 @@
 - name: Learn loops concept
   hosts:  local
-  condition:  local
+  connection:  local
 
   taks:
   - name: Print items using loop
