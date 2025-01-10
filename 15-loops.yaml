@@ -2,7 +2,7 @@
   hosts:  local
   connection:  local
 
-  taks:
+  tasks:
   - name: Print items using loop
     ansible.builtin.debug:
       msg: "{{ item }}"
