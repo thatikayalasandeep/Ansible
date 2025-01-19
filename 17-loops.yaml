@@ -1,0 +1,14 @@
+-   name: Install packages
+    hosts:  web
+
+    tasks:
+    -   name:   installing packages
+        ansible.builtin.package:
+            name:   "{{ item.name }}"
+            state:  "{{ item.state }}"
+
+        loop:
+        -   {   name: git, state: prenset}
+        -   {   name: mysql, state: absent}
+        -   {   name: gcc, state: prenset}
+        -   {   name: zip, state: absent}
