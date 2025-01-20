@@ -1,11 +1,7 @@
--   name: Install packages
-    hosts:  web
+-   name: Install Packages
+    hosts: web
 
     tasks:
-    -   name:   installing packages
-        ansible.builtin.package:
-            name:   "{{ item.name }}"
-            state:  "{{ item.state }}"
-        loop:
-        -   { name: 'git', state: 'present'}
-        -   { name: 'mysql', state: 'present'}
+    -   name:  installing package
+        ansible.builtin.debug:
+            msg: "Hello Dear Ranavva"
