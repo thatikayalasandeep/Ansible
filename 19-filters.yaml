@@ -57,4 +57,4 @@
       ipaddress: "12.22.33.23"
 
     ansible.builtin.debug:
-      msg: "Given ip address is: {{ ip | ansible.utils.ipaddr }}"
+      msg: "Given ip address is: {{ ipaddress | ansible.utils.ipaddr }}"
