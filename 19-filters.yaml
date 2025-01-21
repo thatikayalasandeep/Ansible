@@ -1,0 +1,60 @@
+- name: Filters concept
+  hosts:  local
+  connection: local
+
+  tasks:
+  - name: handle undefine variable
+    ansible.builtin.debug:
+      msg: "Hello {{ person | default('Sandeep') }}"
+
+  - name: convert string to list
+    vars:
+      fruits: "apple, banana, manago, graph"
+    ansible.builtin.debug:
+      msg: "Fruits are: {{ fruits | split(',') }}"
+
+  - name: convert map into list
+    vars:
+      course:
+        course_name:  "AWS DevOps"
+        duration: 120hrs
+        trainer:  Sandeep
+
+    ansible.builtin.debug:
+      msg: "Course details: {{ course | dict2items }}"
+
+  - name: convert list into map
+    vars:
+      course:
+        - { 'key': 'course_name', 'value': 'AWS DevOps' }
+        - { 'key': 'duration', 'value': '120hrs' }
+        - { 'key': 'trainer', 'value': 'Sandeep' }
+
+    ansible.builtin.debug:
+      msg: "Course details: {{ course | items2dict }}"
+
+  - name: convert upper to lower
+    vars:
+      name: SANDEEP THATIKAYALA
+    ansible.builtin.debug:
+      msg: "lower: {{ name | lower }}"
+  
+  - name: convert lower to upper
+    vars:
+      name: sandeep Thatikayala
+    ansible.builtin.debug:
+      msg: "upper: {{ name | upper }}"
+
+  - name: print min and max
+    vars:
+      numbers:  [12, 23, 43, 45, 34, 45, 50]
+    
+   ansible.builtin.debug:
+      msg: "Min is: {{ numbers | min }} and Max is: {{ numbers | max }}"
+
+  - name: check ipaddress is valid or not
+    vars:
+      ipaddress: "12.22.33.38473"
+
+    ansible.builtin.debug:
+      msg: "Given ip address is: {{ ip | ansible.utils.ipaddr }}"
