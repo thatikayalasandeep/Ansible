@@ -1,0 +1,24 @@
+- name: Just re-cap loops concept
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: just print fruit list
+      ansible.builtin.debug:
+        msg:  "{{ item }}"
+
+      loop:
+        - apple
+        - banana
+        - manago
+        - graphs
+    
+    - name: install package
+      ansible.builtin.package:
+        name: "{{ item.name }}"
+        state:  "{{ item.state }}"
+      
+      loop:
+        - { name: "mysql", state: "absent"}
+
+    
